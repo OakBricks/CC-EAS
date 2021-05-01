@@ -7,7 +7,7 @@ function openModems()
 end
 
 function react(msg)
- print(..msg)
+ print(msg)
  pulse(10, "back")
 end
 
@@ -28,7 +28,7 @@ openModems()
 term.clear()
 term.setCursorPos(1, 1)
 print("EAS Decoder v1.0")
-print("["..textutils.formatTime(os.time(), false).."] Starting EAS decoder")
+print("Starting EAS decoder")
 while true do
 senderId, message, protocol = rednet.receive("easp")
 react(message)
