@@ -7,7 +7,7 @@ function error_show()
  print("")
  print("Available event codes:")
  print("EAN, EAT, EVI, CDW, CEM, ADM, LAE, LEW,")
- print("NIC, HMW, SPW, SVS, TOR, BHW, CHW.")
+ print("NIC, HMW, SPW, SVS, TOR, BHW, CHW, RHW.")
  print("See \"Specific Area Message Encoding\"")
  print("on Wikipedia for further information.")
  printError("Usage: eas")
@@ -69,6 +69,9 @@ function same_decode(code)
  elseif code == "CHW" then
   same_d = "Chemical Hazard Warning"
  else
+  elseif code == "RHW" then
+  same_d = "Radioactive Hazard Warning"
+ else
   error_show()
  end
  return same_d
@@ -81,7 +84,7 @@ print("EMERGENCY ALERT SYSTEM")
 print("")
 print("Available event codes:")
 print("EAN, EAT, EVI, CDW, CEM, ADM, LAE, LEW,")
-print("NIC, HMW, SPW, SVS, TOR, BHW, CHW.")
+print("NIC, HMW, SPW, SVS, TOR, BHW, CHW, RHW.")
 print("See \"Specific Area Message Encoding\"")
 print("on Wikipedia for further information.")
 write("Enter event code: ")
