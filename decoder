@@ -7,7 +7,7 @@ function openModems()
 end
 
 function react(msg)
- print("["..textutils.formatTime(os.time(), false).."] "..msg)
+ print(..msg)
  pulse(10, "back")
 end
 
